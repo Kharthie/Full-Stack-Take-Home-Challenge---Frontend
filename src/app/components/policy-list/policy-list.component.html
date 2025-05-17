@@ -1,0 +1,74 @@
+<div class="p-6 max-w-6xl mx-auto">
+    <p class="text-2xl font-bold">Insurance Policies:</p><br>
+
+    <form [formGroup]="filterForm" class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6" (ngSubmit)="fetchPolicies()">
+        <input class="p-2 border rounded w-full" type="text" formControlName="name" placeholder="Name" />
+
+        <input class="p-2 border rounded w-full" type="number" placeholder="Min Premium" formControlName="minpremium" />
+
+        <select class="p-2 border rounded w-full" formControlName="type">
+            <option value="">
+                All Types
+            </option>
+            <option value="Term Life">
+                Term Life
+            </option>
+            <option value="Health">
+                Health
+            </option>
+            <option value="Vehicle">
+                Vehicle
+            </option>
+        </select>
+
+
+        <input class="p-2 border rounded w-full" type="number" placeholder="Max Premium" formControlName="maxpremium" />
+
+        <input class="p-2 border rounded w-full" type="number" placeholder="Min Coverage"
+            formControlName="mincoverage" />
+
+        <select class="p-2 border rounded w-full" formControlName="sort">
+            <option value="">Sort by premium</option>
+            <option value="asc">Low to High</option>
+            <option value="desc">High to Low</option>
+        </select>
+
+
+        <div></div>
+        <button type="submit"
+            class=" bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+            Apply Filters
+        </button>
+    </form>
+
+    <br>
+    <table class="w-full text-left border border-gray-200 shadow" *ngIf="policies.length">
+        <thead class="bg-gray-100">
+            <tr>
+                <th class="p-2 border-b">S.No</th>
+                <th class="p-2 border-b">Name</th>
+                <th class="p-2 border-b">Type</th>
+                <th class="p-2 border-b">Premium</th>
+                <th class="p-2 border-b">Coverage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="hover:bg-gray-50" *ngFor="let policy of policies |
+             paginate: { itemsPerPage : 5 , currentPage : currentPage}; let i = index">
+                <td class="p-2 border-b">{{i + 1}}</td>
+                <td class="p-2 border-b">{{policy.name}}</td>
+                <td class="p-2 border-b">{{policy.type}}</td>
+                <td class="p-2 border-b">${{policy.premium}}</td>
+                <td class="p-2 border-b">${{policy.coverage}}</td>
+            </tr>
+        </tbody>
+    </table><br>
+    <p> Total No of Policies : {{policies.length}}</p>
+
+    <pagination-controls (pageChange)="currentPage=$event" class="mt-4 flex justify-center">
+    </pagination-controls>
+
+    <p class="text-center text-gray-500 mt-4" *ngIf="policies.length === 0">
+        No Policies Found
+    </p>
+</div>
