@@ -5,7 +5,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PolicyService {
-  private apiUrl = 'http://localhost:3000/api/policies';
+  private apiUrl = 'https://full-stack-take-home-challenge-backend.onrender.com/api/policies';
+  // private apiUrl = 'http://localhost:3000/api/policies';
 
   constructor(
     private http: HttpClient
