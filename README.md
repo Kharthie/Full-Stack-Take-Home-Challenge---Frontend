@@ -1,59 +1,80 @@
-# Fronend
+## ✅ Final Deliverables Checklist
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
+### ✅ Codebase
 
-## Development server
+* [ ] Backend API (all required endpoints implemented)
+* [ ] Frontend SPA (filters, search, and results table) pagination, responsive UI.
 
-To start a local development server, run:
+### ✅ Hosting
 
-```bash
-ng serve
-```
+* [ ] **Live demo link** (Netlify / Render )
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### ✅ README File (you can copy and adjust the content below)
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 📄 README.md Template
 
-```bash
-ng generate component component-name
-```
+# Insurance Policy Finder
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+This is a full-stack web application that allows users to browse, search, filter, and sort a list of insurance policies.
 
-```bash
-ng generate --help
-```
+## 🔗 Live Demo
 
-## Building
+[Click here to view the live app]([https://your-app-link.com](https://full-stack-take-home-challenge-front.netlify.app/))
 
-To build the project run:
+## 🛠 Tech Stack
 
-```bash
-ng build
-```
+- **Frontend**: Angular
+- **Backend**: Node.js, Express, JSON
+- **Deployment**: Netlify (Frontend), Render (Backend)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 📦 Features
 
-## Running unit tests
+- View all insurance policies
+- Search policies by name (partial matches supported)
+- Filter by:
+  - Premium range
+  - Policy type (Term Life, Health, Vehicle)
+  - Minimum coverage
+- Sort by premium (ascending or descending)
+- Pagination and empty state messages
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+---
 
-```bash
-ng test
-```
+## 🧑‍💻 Setup Instructions
 
-## Running end-to-end tests
+### Backend
 
-For end-to-end (e2e) testing, run:
+cd backend
+npm install
+node server.js (or) npm start
 
-```bash
-ng e2e
-```
+API is served at: `http://localhost:3000`
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### Frontend
 
-## Additional Resources
+cd frontend
+npm install
+npm start
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+App runs at: `http://localhost:4200`
+
+---
+
+## 📊 API Endpoints
+
+* `GET /policies` - Fetch all policies
+* `GET /policies?search=health` - Search by name
+* `GET /policies?minPremium=2000&maxPremium=5000&type=Health&minCoverage=300000&sort=asc` - Filter & sort
+
+---
+
+## ✅ Improvements & Enhancements (Bonus)
+
+* ✅ Responsive design
+* ✅ Pagination
+* ✅ Input validation and error handling
+* ✅ Empty result feedback
+
+---
