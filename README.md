@@ -21,6 +21,8 @@ This is a full-stack web application that allows users to browse, search, filter
 
 ## 🔗 Live Demo
 
+- [Live Demo](https://github.com/Kharthie/Full-Stack-Take-Home-Challenge---Frontend)
+
 ## 📦 Repositories
 
 - [Frontend Repo](https://github.com/Kharthie/Full-Stack-Take-Home-Challenge---Frontend)
