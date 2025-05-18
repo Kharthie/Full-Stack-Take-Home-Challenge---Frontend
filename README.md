@@ -21,7 +21,11 @@ This is a full-stack web application that allows users to browse, search, filter
 
 ## 🔗 Live Demo
 
-[Click here to view the live app]([https://your-app-link.com](https://full-stack-take-home-challenge-front.netlify.app/))
+## 📦 Repositories
+
+- [Frontend Repo](https://github.com/Kharthie/Full-Stack-Take-Home-Challenge---Frontend)
+- [Backend Repo](https://github.com/Kharthie/Full-Stack-Take-Home-Challenge---Backend)
+
 
 ## 🛠 Tech Stack
 
